@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Mochiy+Pop+One&family=Nanum+Myeongjo&family=Play&family=Red+Hat+Mono:wght@300&family=Roboto:ital,wght@1,500&family=Rubik&family=Spartan:wght@200&display=swap" rel="stylesheet">
+<link rel="icon" href="https://winaero.com/blog/wp-content/uploads/2019/09/MSN-Weather-icon.png" />
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+<link rel="stylesheet" href="CSS/weather.css" >
+</head>
+  <body>
+      
+    <div style="position: relative; width: 100vw;">
+        <iframe
+    loading="lazy"
+    allowfullscreen >
+  </iframe>
+
+  <div>
+    <div>
+      <form class="searchform cf" autocomplete="off" action="">
+        <div class="autocomplete cntr">
+          <input
+            id="myInput"
+            type="text"
+            name="myCountry"
+            placeholder="Enter city Name to get the weather report..."
+          />
+          <button onclick="showData(event)">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="day-container">
+      <h1 id="time"></h1>
+      <h2 id="date"></h2>
+      <hr>
+      <h2 id="population"></h2>
+      <h2 id="lat"></h2>
+      <h2 id="long"></h2>
+      <hr>
+      <p style="font-weight: bold;">Developed by <span style="color: red; font-size: 20px;">&#128149;</span> Tazammul</p>
+      </div>
+  <div class="weather-container">
+            <div>
+                <div id="weather-temp">
+                    
+                </div>
+                <div>
+                   <center> <img id="weather-img"></center>
+                </div>
+                
+            </div>
+            <div class="more-info">
+                    
+              <div id="descr"></div>
+                <div>
+                    <label><span class="iconify" data-icon="carbon:humidity" style="font-size: 20px;"></span> Humidity</label>
+                    <label id="humidity"></label>
+                </div>
+                <div>
+                    <label><span class="iconify" data-icon="fa-solid:wind"></span>  Wind Speed</label>
+                    <label id="wind"></label>
+                </div>
+                <div>
+                    <label><span class="iconify" data-icon="healthicons:cold-chain"></span> Min Temp</label>
+                    <label id="min-temp"></label>
+                </div>
+                <div>
+                    <label><span class="iconify" data-icon="carbon:temperature-hot"> </span> Max Temp</label>
+                    <label id="max-temp"></label>
+                </div>
+                <!-- <div>
+                    <label>Cloud</label>
+                    <label id="cloud"></label>
+                </div> -->
+                <div>
+                    <label><span class="iconify" data-icon="whh:sunrise"></span> Sunrise</label>
+                    <label id="sunrise"></label>
+                </div>
+                <div>
+                    <label><span class="iconify" data-icon="whh:sunset"></span> Sunset</label>
+                    <label id="sunset"></label>
+                </div>
+            </div>
+        </div>
+        <div class="seven-days-container">
+          <div class="day-1">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-2">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-3">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-4">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-5">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-6">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          <div class="day-7">
+            <div id="weekday"></div>
+            <div class="middle-container">
+              <div id="temp"></div>
+              <div>
+                <img id="img">
+              </div>
+            </div>
+            <div>
+              <lable>Min Temp</lable>
+              <lable id="weekday-min-temp"></lable>
+            </div>
+            <div>
+              <lable>Max Temp</lable>
+              <lable id="weekday-max-temp"></lable>
+            </div>
+          </div>
+          </div>
+   
+  </body>
+
+  <script src="JS/weather.js"></script>
+  </html>
