@@ -1,0 +1,379 @@
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /*the container must be positioned relative:*/
+      .autocomplete {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* input {
+        border: 1px solid transparent;
+        background-color: #f1f1f1;
+        padding: 10px;
+        font-size: 16px;
+      } */
+
+      /* input[type="text"] {
+        background-color: #f1f1f1;
+        width: 100%;
+      } */
+      /* 
+      input[type="submit"] {
+        background-color: DodgerBlue;
+        color: #fff;
+        cursor: pointer;
+      } */
+
+      /* theme */
+
+      *,
+      *:after,
+      *:before {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      .cf:before,
+      .cf:after {
+        content: "";
+        display: table;
+      }
+      .cf:after {
+        clear: both;
+      }
+
+      body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing:border-box;
+        /* background: teal; */
+        background-image: url("https://adwallpapers.xyz/uploads/posts/72981-sunset-clouds-sea-4k-ultra-hd-wallpaper__nature.jpg");
+        background-size: cover;
+        
+        font-family: 'Spartan', sans-serif;
+      }
+      a,
+      a:visited {
+        color: #fff;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 0px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #5bccf6;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #075470;
+      }
+
+      /*--------------------------------------------------------------
+2.0 - SEARCH FORM
+--------------------------------------------------------------*/
+      .searchform {
+        background: #f4f4f4;
+        background: rgba(244, 244, 244, 0.79);
+        border: 1px solid #d3d3d3;
+        left: 30%;
+        padding: 5px 8px;
+        position: absolute;
+        margin: -22px 0 0;
+        top: 10%;
+        /* width:610px; */
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+        border-radius: 10px;
+      }
+
+      .searchform input,
+      .searchform button {
+        float: left;
+      }
+      .searchform input {
+        background: #fefefe;
+        border: none;
+        font: 12px/12px "HelveticaNeue", Helvetica, Arial, sans-serif;
+        margin-right: 5px;
+        padding: 10px;
+        width: 400px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
+          1px 1px 1px rgba(255, 255, 255, 0.75);
+        border-radius: 9px;
+      }
+      .searchform input:focus {
+        outline: none;
+        box-shadow: 0 0 4px #00bbff inset;
+      }
+
+      .searchform button {
+        background: rgb(70, 179, 238);
+        background: linear-gradient(
+          to bottom,
+          rgba(52, 173, 236, 1) 0%,
+          rgba(38, 145, 220, 1) 100%
+        );
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font: 13px/13px "HelveticaNeue", Helvetica, Arial, sans-serif;
+        padding: 10px;
+        width: 180px;
+        box-shadow: 0 0 2px #2692dd inset;
+        border-radius: 10px;
+      }
+      .searchform button:hover {
+        opacity: 0.9;
+      }
+
+      /* theme */
+
+      .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 500px;
+        width: 400px;
+        overflow: scroll;
+      }
+
+      .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+      }
+
+      /*when hovering an item:*/
+      .autocomplete-items div:hover {
+        background-color: #e9e9e9;
+      }
+
+      /*when navigating through the items using the arrow keys:*/
+      .autocomplete-active {
+        background-color: DodgerBlue !important;
+        color: #ffffff;
+      }
+      
+
+      iframe
+      {
+        /* width: 90px;
+        height: 100vh; */
+        width: 100%;
+        height: 99vh;
+      }
+      .day-container
+      {
+        position: absolute; 
+        top:5%; 
+        right: 5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 18%;
+        font-size: 0.7em;
+        display: none;
+        border: 3px solid white;
+        box-shadow: rgba(0, 0, 0, 0.9) 0px 19px 38px, rgba(0, 0, 0, 0.1) 0px 5px 5px;
+        /* box-shadow: rgba(0, 0, 0, 0.7) 0px 3px 6px, rgba(0, 0, 0, 0.4) 0px 3px 6px; */
+        color: white;
+      }
+      .day-container:hover
+      {
+        transform: scale(1.1,1.1);
+        /* transition: 0.5ms ease-in-out; */
+      }
+
+      #time, #date
+      {
+          color: white;
+          font-weight: 100;
+          text-align: center;
+      }
+      
+      .weather-container
+      {
+        position: absolute; 
+        top: 20%;
+        left:3%;
+        background-color: rgba(0, 0, 0, 0.5);  
+        /* background-image: url("https://www.publicdomainpictures.net/pictures/320000/velka/sunset-clouds-1578320756Rjt.jpg"); */
+        padding: 20px 20px 10px 30px;
+        border-radius: 10px;
+        width: 28%;
+        font-size: 0.8em;
+        color: white;
+        display: none;
+        border: 3px solid white;
+        box-shadow: rgba(0, 0, 0, 0.9) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
+        justify-content: space-between;
+      }
+
+      .weather-container:hover
+      {
+        transform: scale(1.05,1.05);
+        
+        /* background-color: rgba(0, 0, 0, 0.8);   */
+        /* background-image: url("https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+        color: black !important; */
+        /* transition: 0.5ms ease-in-out; */
+      }
+
+      #weather-temp
+      {
+          text-align: center;
+          font-size: 2.5em;
+          padding:10px;
+          padding-left: 30px;
+          font-weight: bold;
+          /* width: 50%; */
+          
+      }
+      #weather-temp~div{
+          height: 100%;
+      }
+      #weather-temp,  #weather-temp~div
+      {
+          /* border: 1px solid red; */
+      }
+      #weather-img
+      {
+        
+    width: 150px; /* width of container */
+    margin: auto;
+    text-align: center;
+    height: 150px; /* height of container */
+    /* object-fit: cover; */
+
+      }
+      .more-info
+      {
+        /* padding-top: 30px;
+        padding-left: 20px; */
+        /* border: 1px solid white; */
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 45%;
+      }
+      .more-info > div
+      {
+          line-height:2.2;
+      }
+      .more-info > div > label:nth-child(2)
+      {
+          /* color: red; */
+        float: right;
+      }
+      .iconify
+      {
+        font-size: 18px;
+      }
+      #descr
+      {
+          text-align: center;
+          font-size: 1.2em;
+          font-weight: bold;
+          text-transform:uppercase;
+        }
+        .seven-days-container
+        {
+          display: none;
+          height: 190px;
+          width: 92%;
+          margin: auto;
+          /* border: 1px solid blue; */
+          position: absolute;
+          bottom: 5%;
+          left: 4%;
+          justify-content: space-between;
+        }
+        .seven-days-container > div
+        {          
+          padding: 10px;
+          width: 13.5%;
+          height: 100%;
+          border: 1px solid red;
+          background-color: rgba(0, 0, 0, 0.5);
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 25px 20px -20px;
+        border: 3px solid white;
+        border-radius: 10px;
+        color: white;
+        }
+
+        .seven-days-container > div:hover
+      {
+        transform: scale(1.1,1.1);
+        /* transition: 0.5ms ease-in-out; */
+      }
+        
+        .seven-days-container > div > div:nth-child(1)
+{
+  height: 20%;
+}
+.seven-days-container > div > div:nth-child(2)
+{
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.seven-days-container > div > div:nth-child(3)
+{
+  height: 15%;
+}
+.seven-days-container > div > div:nth-child(4)
+{
+  height: 15%;
+}
+.seven-days-container #weekday
+{
+  text-align: center;
+  font-weight: 500;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+.seven-days-container #temp
+{
+  font-size: 1.3em;
+  padding-top: 15px;
+  text-align: center;
+  font-weight: 800;
+}
+.seven-days-container .middle-container  img
+{
+  /* border: 2px solid black; */
+  height: 70px;
+  width: 70px;
+}
+#weekday-min-temp, #weekday-max-temp
+{
+  /* text-align: right; */
+  float: right;
+}
+.seven-days-container > div >  div:nth-child(3),.seven-days-container > div >  div:nth-child(4)
+{
+  font-size: 12px;
+  /* border: 1px solid; */
+}
