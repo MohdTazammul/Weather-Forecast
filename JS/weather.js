@@ -122,13 +122,13 @@ function showData(e) {
     //
     //
 
-    imgSrc = "icons/" + icon + ".png";
+    imgSrc = "Icons/" + icon + ".png";
     if (icon == "10d" || icon == "09d")
       // rain -day
-      imgSrc = "icons/10d_09d.png";
+      imgSrc = "Icons/10d_09d.png";
     else if (icon == "09n" || icon == "10n")
       // rain - night
-      imgSrc = "icons/10n_09n.png";
+      imgSrc = "Icons/10n_09n.png";
 
     document.getElementById("weather-img").setAttribute("src", imgSrc);
 
@@ -229,13 +229,13 @@ function showData(e) {
 
       // var imgSrc = `https://openweathermap.org/img/wn/${icon}@4x.png`
 
-      imgSrc = "icons/" + icon + ".png";
+      imgSrc = "Icons/" + icon + ".png";
       if (icon == "10d" || icon == "09d")
         // rain -day
-        imgSrc = "icons/10d_09d.png";
+        imgSrc = "Icons/10d_09d.png";
       else if (icon == "09n" || icon == "10n")
         // rain - night
-        imgSrc = "icons/10n_09n.png";
+        imgSrc = "Icons/10n_09n.png";
 
       document.querySelector(`.day-${y + 1}  img`).setAttribute("src", imgSrc);
 
