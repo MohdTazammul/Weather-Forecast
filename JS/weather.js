@@ -2,8 +2,10 @@ function showData(e) {
   e.preventDefault();
   var inp = document.getElementById("myInput").value;
   // inp = inp.replaceAll()
+  
+  // var key ="AIzaSyArGwkoC8UwkwCuQ_lGFgma5ul0DEz8zaU"
   var src =
-    "https://www.google.com/maps/embed/v1/place?key=AIzaSyBhtKbuCBhDTf3aw3aw2akqIkSpjp-_v10&q=";
+    "https://www.google.com/maps/embed/v1/place?key=AIzaSyAbkfMbHnkJAx7ZkJSgGZRHD6FE3TfOq30&q=";
   src += inp;
   // src+="Delhi";
   var iframe = document.querySelector("iframe");
@@ -60,6 +62,7 @@ function showData(e) {
 
   //show weather
   var key = "fea74d61489aeb266caea601dd5a609e";
+  // var key ="AIzaSyArGwkoC8UwkwCuQ_lGFgma5ul0DEz8zaU"
 
   // var url = `https://api.openweathermap.org/data/2.5/weather?q=${inp}&units=imperial&appid=${key}`
   var url = `https://api.openweathermap.org/data/2.5/forecast?q=${inp}&appid=${key}&units=imperial&cnt=7`;
