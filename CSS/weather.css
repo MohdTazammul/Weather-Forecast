@@ -51,9 +51,8 @@
         padding: 0px;
         box-sizing:border-box;
         /* background: teal; */
-        background-image: url("https://adwallpapers.xyz/uploads/posts/72981-sunset-clouds-sea-4k-ultra-hd-wallpaper__nature.jpg");
+        background-image: url("https://wallpapers.com/images/hd/digital-art-weather-xqhs9axpy8btfd3y-xqhs9axpy8btfd3y.jpg");
         background-size: cover;
-        
         font-family: 'Spartan', sans-serif;
       }
       a,
@@ -97,7 +96,6 @@
         top: 10%;
         /* width:610px; */
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
         border-radius: 10px;
       }
 
@@ -188,12 +186,12 @@
       {
         position: absolute; 
         top:5%; 
-        right: 5%;
+        right: 2%;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px 20px;
         border-radius: 10px;
         width: 18%;
-        font-size: 0.7em;
+        font-size: 0.6em;
         display: none;
         border: 3px solid white;
         box-shadow: rgba(0, 0, 0, 0.9) 0px 19px 38px, rgba(0, 0, 0, 0.1) 0px 5px 5px;
@@ -222,13 +220,15 @@
         /* background-image: url("https://www.publicdomainpictures.net/pictures/320000/velka/sunset-clouds-1578320756Rjt.jpg"); */
         padding: 20px 20px 10px 30px;
         border-radius: 10px;
-        width: 28%;
+        /* width: 35%; */
         font-size: 0.8em;
         color: white;
         display: none;
+        gap: 30px;
         border: 3px solid white;
         box-shadow: rgba(0, 0, 0, 0.9) 0px 19px 38px, rgba(0, 0, 0, 0.4) 0px 15px 12px;
         justify-content: space-between;
+        transition: 200ms;
       }
 
       .weather-container:hover
@@ -243,6 +243,7 @@
 
       #weather-temp
       {
+        /* border: 2px solid red; */
           text-align: center;
           font-size: 2.5em;
           padding:10px;
@@ -261,10 +262,10 @@
       #weather-img
       {
         
-    width: 150px; /* width of container */
+    width: 12em; /* width of container */
     margin: auto;
     text-align: center;
-    height: 150px; /* height of container */
+    /* height of container */
     /* object-fit: cover; */
 
       }
@@ -276,7 +277,7 @@
         border-radius: 10px;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.6);
-        width: 45%;
+        width: 200px;
       }
       .more-info > div
       {
@@ -301,7 +302,7 @@
         .seven-days-container
         {
           display: none;
-          height: 190px;
+          height: 170px;
           width: 92%;
           margin: auto;
           /* border: 1px solid blue; */
@@ -321,6 +322,7 @@
         border: 3px solid white;
         border-radius: 10px;
         color: white;
+        transition: 200ms;
         }
 
         .seven-days-container > div:hover
@@ -336,8 +338,10 @@
 .seven-days-container > div > div:nth-child(2)
 {
   height: 50%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 55% 40%;
   justify-content: space-between;
+  /* border: 1px solid red; */
 }
 .seven-days-container > div > div:nth-child(3)
 {
@@ -356,7 +360,7 @@
 }
 .seven-days-container #temp
 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding-top: 15px;
   text-align: center;
   font-weight: 800;
@@ -364,8 +368,8 @@
 .seven-days-container .middle-container  img
 {
   /* border: 2px solid black; */
-  height: 70px;
-  width: 70px;
+  /* height: 70px; */
+  width: 100%;
 }
 #weekday-min-temp, #weekday-max-temp
 {
